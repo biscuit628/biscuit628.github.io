@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>線上購物車 - Formspree 版本</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>歡迎光臨我們的商店</h1>
+        
+        <div class="shop-container">
+            <!-- 商品列表 -->
+            <div class="products">
+                <h2>商品列表</h2>
+                <div class="product-list">
+                    <div class="product" data-id="1" data-price="299">
+                        <img src="https://via.placeholder.com/150" alt="商品1">
+                        <h3>商品1</h3>
+                        <p>價格: $299</p>
+                        <button class="add-to-cart">加入購物車</button>
+                    </div>
+                    <div class="product" data-id="2" data-price="499">
+                        <img src="https://via.placeholder.com/150" alt="商品2">
+                        <h3>商品2</h3>
+                        <p>價格: $499</p>
+                        <button class="add-to-cart">加入購物車</button>
+                    </div>
+                    <div class="product" data-id="3" data-price="799">
+                        <img src="https://via.placeholder.com/150" alt="商品3">
+                        <h3>商品3</h3>
+                        <p>價格: $799</p>
+                        <button class="add-to-cart">加入購物車</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 購物車 -->
+            <div class="cart">
+                <h2>購物車 <span id="cart-count">0</span></h2>
+                <div class="cart-items">
+                    <!-- 購物車商品將在這裡動態添加 -->
+                </div>
+                <div class="cart-total">
+                    <p>總金額: $<span id="total-price">0</span></p>
+                    <button id="checkout">結帳</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 訂單成功模態框 -->
+    <div id="success-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>訂單已提交成功！</h2>
+            <p>我們已收到您的訂單，將會盡快處理。</p>
+            <p>訂單編號: <span id="order-id"></span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
